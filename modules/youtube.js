@@ -30,6 +30,7 @@ const youtubeScrapper = async (bot, chatId, medias) => {
                     const data = await axios.request(config)
                     shorturl = data.data.url;
                 } catch (error) {
+                    console.log(error);
                     return linkError(bot, chatId)
                 }
 
@@ -47,6 +48,6 @@ const youtubeScrapper = async (bot, chatId, medias) => {
 }
 
 module.exports = {
-    linkPrefix: 'youtube',
+    linkPrefix: 'youtu',
     handle: youtubeScrapper
 }
