@@ -43,7 +43,7 @@ bot.on('message', async function (msg) {
                             inline_keyboard: [
                                 [{
                                     text: 'Donate',
-                                    url: 'https://zm.io.vn/donate'
+                                    url: process.env.BASE_URL + 'donate'
                                 }]
                             ]
                         }
